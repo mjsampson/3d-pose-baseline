@@ -1,0 +1,16 @@
+version: '3'
+services:
+    3d-pose-baseline:
+        build:
+          #contect specifies where the dockerfile is
+          context: .
+          #specifies the docker file to be built
+          dockerfile: Dockerfile
+          #Can use the args to provide input arguments for dockerfile
+          #args:
+          #   buildno : 1  # <- this sets the build number which is an argument in the dockerfile to 1
+
+        container_name: 3d-pose-baseline
+        volumes:
+          - /RemoteDockerFiles/MatthewWorkstation/3d-pose-baseline:/code/
+         #put volumes here -  /path/on/system:/path/in/container
