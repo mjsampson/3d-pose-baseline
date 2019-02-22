@@ -525,7 +525,7 @@ def sample():
     exidx = exidx + 1
     subplot_idx = subplot_idx + 3
 
-  plt.show()
+  plt.savefig("/code/figures/")
 
 def main(_):
   if FLAGS.sample:
