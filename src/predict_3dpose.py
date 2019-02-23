@@ -402,6 +402,7 @@ def sample():
 
   actions = data_utils.define_actions( FLAGS.action )
 
+
   # Load camera parameters
   SUBJECT_IDS = [1,5,6,7,8,9,11]
   rcams = cameras.load_cameras(FLAGS.cameras_path, SUBJECT_IDS)
