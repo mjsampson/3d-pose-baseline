@@ -10,6 +10,7 @@ def compute_similarity_transform(X, Y, compute_optimal_scale=False):
     compute_optimal_scale: whether we compute optimal scale or force it to be 1
 
   Returns:
+
     d: squared error after transformation
     Z: transformed Y
     T: computed rotation

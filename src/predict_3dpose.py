@@ -60,7 +60,7 @@ tf.app.flags.DEFINE_integer("load", 0, "Try to load a previous checkpoint.")
 tf.app.flags.DEFINE_boolean("use_fp16", False, "Train using fp16 instead of fp32.")
 
 FLAGS = tf.app.flags.FLAGS
-
+#Matthew Comment: Very cool how they set it up this way to train with different values
 train_dir = os.path.join( FLAGS.train_dir,
   FLAGS.action,
   'dropout_{0}'.format(FLAGS.dropout),
@@ -251,7 +251,7 @@ def train():
         print("{0:=^19}".format(''))
 
       else:
-
+#Matthew Comment -> I think this is the part where the algorithm is ran
         n_joints = 17 if not(FLAGS.predict_14) else 14
         encoder_inputs, decoder_outputs = model.get_all_batches( test_set_2d, test_set_3d, FLAGS.camera_frame, training=False)
 
@@ -491,6 +491,9 @@ def sample():
   enc_in, dec_out, poses3d = map( np.vstack, [enc_in, dec_out, poses3d] )
   idx = np.random.permutation( enc_in.shape[0] )
   enc_in, dec_out, poses3d = enc_in[idx, :], dec_out[idx, :], poses3d[idx, :]
+##
+
+# Matthew-Comment : This code is used to visualize stuff I think
 
   # Visualize random samples
   import matplotlib.gridspec as gridspec
